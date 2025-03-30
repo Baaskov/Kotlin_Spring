@@ -1,7 +1,5 @@
 package org.example.lesson_1
 
-import java.util.Spliterator.OfDouble
-
 fun main() {
     val lenght: String = "40_868_600_000"
     val age: Byte = 27
