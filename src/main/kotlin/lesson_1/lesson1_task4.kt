@@ -1,7 +1,7 @@
 package org.example.lesson_1
 
 fun main() {
-    val lenght: String = "40_868_600_000"
+    val lenght: Long = 40_868_600_000
     val age: Byte = 27
     val partOfDay: Float = 0.075f
     val seconds: Short = 6480
@@ -14,5 +14,4 @@ fun main() {
     println(seconds)
     println(partOfYear)
     println(apogee)
-
 }
