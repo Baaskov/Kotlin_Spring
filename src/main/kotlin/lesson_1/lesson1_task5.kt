@@ -1,24 +1,13 @@
 package org.example.lesson_1
 
 fun main() {
-    var allTime: Short = 6480
+    val allTime: Short = 6480
+    val minuteInSecond: Byte = 60
+    val hoursInSecond: Short = 3600
 
-    var hours: Int = allTime / 3600
-    if (hours < 10)
-        print("0" + hours)
-    else
-        print(hours)
+    val hours: Int = allTime / hoursInSecond
+    val minute: Int = allTime / minuteInSecond - (hours * minuteInSecond)
+    val seconds: Int = allTime - (hours * hoursInSecond) - (minute * minuteInSecond)
 
-    var minute: Int = allTime / 60 - (hours * 60)
-    if (minute < 10)
-        print(":0" + minute)
-    else
-        print(":" + minute)
-
-    var seconds: Int = allTime - (hours * 3600) - (minute * 60)
-    if (seconds < 10)
-        print(":0" + seconds)
-    else
-        print(":" + seconds)
-
+    println(String.format("%02d:%02d:%02d", hours, minute, seconds))
 }
