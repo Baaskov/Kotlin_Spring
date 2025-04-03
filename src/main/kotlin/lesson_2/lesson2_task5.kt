@@ -3,10 +3,12 @@ package org.example.lesson_2
 import kotlin.math.pow
 
 fun main() {
-    var percent: Double = 0.167
-    var summ: Int = 70000
-    var years: Int = 20
+    var percent: Double = 16.7
+    percent /= 100
+    val sum: Int = 70000
+    val years: Int = 20
+    val dayAYear: Int = 365
+    val daysBeforeAccrual: Int = 365
 
-    println(String.format("%.3f", (summ*(1+percent*365/365*1).pow(20))))
-
+    println(String.format("%.3f", (sum * (1 + percent * daysBeforeAccrual / dayAYear * 1).pow(20))))
 }
