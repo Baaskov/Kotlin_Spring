@@ -1,16 +1,15 @@
 package org.example.lesson_2
 
 fun main() {
-    var hours: Int = 9
-    var minutes: Int = 39
-    var outTime: Int = (hours * 60) + minutes
-    var travelTime: Int = 457
+    val hours: Int = 9
+    val minutes: Int = 39
+    val minutesInHours: Int = 60
+    val outTime: Int = (hours * minutesInHours) + minutes
+    val travelTime: Int = 457
 
-    var arrivalTime: Int = outTime + travelTime
-    hours = (arrivalTime / 60)
-    minutes = (arrivalTime % 60)
+    val arrivalTime: Int = outTime + travelTime
 
-    print(hours)
+    print(arrivalTime / minutesInHours)
     print(":")
-    print(minutes)
+    print(arrivalTime % minutesInHours)
 }
